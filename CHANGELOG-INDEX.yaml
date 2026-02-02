@@ -1,0 +1,23 @@
+# CHANGELOG_INDEX.yaml
+version: 1
+entries:
+  email-pii-classification-update-2026-02-01:
+    title: 'Email PII classification update (exact domain match)'
+    date: '2026-02-01'
+    scope: ['classification', 'PII', 'email']
+    notebook: 'notebooks/CHANGELOG_2026-02-01.py'
+    adr: 'docs/decisions/0003-classification-policy.md'
+    summary: >
+      Tightened rule to require exact @example.com suffix to reduce false positives
+      from free-text notes referencing the domain.
+    reviewers: ['Legal-Ops', 'Data-Governance']
+    ticket: 'GOV-1234'
+  hr-retention-exception-2026-02-10:
+    title: 'Retention exception for HR datasets (90-day hold)'
+    date: '2026-02-10'
+    scope: ['retention', 'HR', 'policy']
+    notebook: 'notebooks/CHANGELOG_2026-02-10.py'
+    adr: null
+    summary: 'Temporary hold extension during policy review; logged for audit.'
+    reviewers: ['Records-Management']
+    ticket: 'GOV-1277'

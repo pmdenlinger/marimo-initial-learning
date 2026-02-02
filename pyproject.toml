@@ -1,9 +1,26 @@
 [project]
 name = "marimo-initial-learning"
 version = "0.1.0"
-description = "Add your description here"
+description = "A minimal Marimo learning repo using uv for fast, reproducible environments."
 readme = "README.md"
-requires-python = ">=3.13"
+requires-python = ">=3.9"
+authors = [{ name = "Paul Denlinger" }]
+
+# Keep it minimal to start; you can switch to "marimo[recommended]" later.
 dependencies = [
-    "marimo>=0.19.7",
+  "marimo",
 ]
+
+[tool.uv]
+# If you later want dev-only tools, you can add:
+# dev-dependencies = ["pytest", "ruff"]
+
+[tool.uv.scripts]
+# Run the built-in Marimo intro tutorial
+tutorial = "marimo tutorial intro"
+
+# Open (or create) your first notebook in the editor
+edit-hello = "marimo edit notebooks/001_hello_marimo.py"
+
+# Serve a read-only app (good for demos) – update the path as you add notebooks
+run-hello = "marimo run notebooks/001_hello_marimo.py"
